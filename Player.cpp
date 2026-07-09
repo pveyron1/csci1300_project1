@@ -48,7 +48,7 @@ Inventory& Player::getInventory()
 
 void Player::displayStats()
 {
-    cout << "\nPlayer: " << name << endl;
+    cout << "Player: " << name << endl;
     cout << "Energy: " << energy << endl;
     cout << "Money: $" << money << endl;
 }

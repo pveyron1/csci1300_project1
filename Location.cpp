@@ -42,7 +42,7 @@ bool Location::isUnlocked()
 
 void Location::displayLocation()
 {
-    cout << "\nLocation: " << name << endl;
+    cout << "Location: " << name << endl;
     cout << description << endl;
 
     if(unlocked)

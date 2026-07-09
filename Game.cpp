@@ -8,7 +8,7 @@ Game::Game()
     running = true;
     day = 1;
 
-    // Villagers
+    // npcs
     villagers[0].setName("Lewis");
     villagers[0].setDialogue("Welcome to Stardew Valley!");
     villagers[0].setQuest("Collect one Parsnip.");
@@ -17,7 +17,7 @@ Game::Game()
     villagers[1].setDialogue("Need anything built?");
     villagers[1].setQuest("Gather 10 Wood.");
 
-    // Locations
+    // places
     locations[0].setName("Farm");
     locations[0].setDescription("Your home and crops.");
     locations[0].setUnlocked(true);
@@ -55,7 +55,7 @@ void Game::displayMenu()
 
     player.displayStats();
 
-    cout << "\nCurrent Location: "
+    cout << "Current Location: "
          << locations[player.getLocation()].getName() << endl;
 
     cout << "\nMenu"<< endl;
@@ -75,7 +75,7 @@ void Game::gameLoop()
     {
         displayMenu();
 
-        cout << "\nChoice: ";
+        cout << "Choice: ";
         cin >> choice;
 
         switch(choice)
@@ -98,16 +98,16 @@ void Game::gameLoop()
 
         case 5:
             day++;
-            cout << "\nA new day begins..."<< endl;;
+            cout << "A new day begins..."<< endl;;
             break;
 
         case 6:
             running = false;
-            cout << "\nThanks for playing!"<< endl;
+            cout << "Thanks for playing!"<< endl;
             break;
 
         default:
-            cout << "\nInvalid choice." << endl;
+            cout << "Invalid choice." << endl;
         }
     }
 }

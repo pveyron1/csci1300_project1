@@ -19,7 +19,7 @@ void Inventory::addItem(Item item)
 
 void Inventory::displayInventory()
 {
-    cout << "\nInventory" << endl;
+    cout << "Inventory" << endl;
 
     if(itemCount == 0)
     {

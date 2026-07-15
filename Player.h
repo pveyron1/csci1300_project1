@@ -10,7 +10,7 @@ class Player
 {
 private:
     string name;
-    int energy;
+  
     int money;
     int currentLocation;
 
@@ -23,11 +23,11 @@ public:
 
     string getName();
 
-    int getEnergy();
+   
     int getMoney();
     int getLocation();
 
-    void setLocation(int loc);
+    void setLocation(int newLocation);
 
     Inventory& getInventory();
 

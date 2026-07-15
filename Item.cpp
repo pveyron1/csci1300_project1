@@ -7,10 +7,39 @@ Item::Item()
     value = 0;
 }
 
-void Item::setName(string n){ name = n; }
-void Item::setType(string t){ type = t; }
-void Item::setValue(int v){ value = v; }
+Item::Item(string n, string t)
+{
+    name = n;
+    type = t;
+    value = 0;
+}
 
-string Item::getName(){ return name; }
-string Item::getType(){ return type; }
-int Item::getValue(){ return value; }
+void Item::setName(string n)
+{
+    name = n;
+}
+
+void Item::setType(string t)
+{
+    type = t;
+}
+
+void Item::setValue(int v)
+{
+    value = v;
+}
+
+string Item::getName()
+{
+    return name;
+}
+
+string Item::getType()
+{
+    return type;
+}
+
+int Item::getValue()
+{
+    return value;
+}

@@ -5,12 +5,13 @@
 #include "Villager.h"
 #include "Location.h"
 
+
 class Game
 {
 private:
     Player player;
 
-    Villager villagers[2];
+    Villager villagers[3];
 
     Location locations[5];
 
@@ -18,14 +19,55 @@ private:
 
     int day;
 
-public:
+    void talkToWilly();
+    
+    int willyTalkCount;
+    
+    bool fishQuestComplete;
+
+    bool locationAction();
+
+    void talkToLewis();
+
+    bool beachAction();
+    
+    void gameLoop();
+
+    void displayMenu();
+
+    void displayMap();
+
+    bool bundleComplete();
+
+    bool travel();
+
+    void typeMessage(string message);
+
+    void pauseGame();
+    
+    bool communityCenterAction();
+    
+    void talkAtCommunityCenter();
+    
+    void displayBundleProgress();
+
+    bool donateBundleItems();
+
+    bool fishDonated;
+    
+    bool cropDonated;
+
+    bool mineralDonated;
+   
+    public:
     Game();
 
     void start();
 
-    void gameLoop();
 
-    void displayMenu();
+   
 };
+
+
 
 #endif

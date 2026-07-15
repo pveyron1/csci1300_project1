@@ -1,4 +1,5 @@
-
+#include <string>
+using namespace std;
 #ifndef INVENTORY_H
 #define INVENTORY_H
 
@@ -15,7 +16,12 @@ public:
     Inventory();
 
     void addItem(Item item);
+    
     void displayInventory();
+    
+    bool hasItem(string itemName);
+
+    bool removeItem(string itemName);
 };
 
 #endif

@@ -34,3 +34,33 @@ void Inventory::displayInventory()
              << endl;
     }
 }
+bool Inventory::hasItem(string itemName)
+{
+    for (int i = 0; i < itemCount; i++)
+    {
+        if (items[i].getName() == itemName)
+        {
+            return true;
+        }
+    }
+
+    return false;
+}
+bool Inventory::removeItem(string itemName)
+{
+    for (int i = 0; i < itemCount; i++)
+    {
+        if (items[i].getName() == itemName)
+        {
+            for (int j = i; j < itemCount - 1; j++)
+            {
+                items[j] = items[j + 1];
+            }
+
+            itemCount--;
+            return true;
+        }
+    }
+
+    return false;
+}

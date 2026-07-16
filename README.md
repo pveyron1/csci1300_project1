@@ -10,25 +10,32 @@ To fill the bundle
 
 ## How to compile and run
 
-compile all the files then ./project1
+compile with
+
+g++ -std=c++17 -Wall -Wextra -Wpedantic \
+main.cpp \
+Game.cpp \
+Player.cpp \
+Inventory.cpp \
+Item.cpp \
+Location.cpp \
+-o project1
+
+then run using ./project1
 
 ## How to play
 
-not done but go through menus and travel to talk to different people to 
+Go through the menus and talk to lewis who tells you how to start out, then talk to various villagers to collect all items for the final bundle
 
 ## Classes
 
 game - controls all players, villagers, locations, day and whether or not its running
 
-player - stores name energy money location inventory
+player - stores name location inventory
 
 inventory - holds item player has
 
-item - is the item player holds
-
-character - holds all npcs
-
-villager - inherits character and gives quests and rewards
+item - is the items the player will have
 
 location - places player can visit and shows whether unlocked or not
 

@@ -1,17 +1,17 @@
 #ifndef GAME_H
 #define GAME_H
 
+#include <string>
+
 #include "Player.h"
-#include "Villager.h"
 #include "Location.h"
 
+using namespace std;
 
 class Game
 {
 private:
     Player player;
-
-    Villager villagers[3];
 
     Location locations[5];
 
@@ -19,55 +19,84 @@ private:
 
     int day;
 
-    void talkToWilly();
-    
     int willyTalkCount;
-    
+
     bool fishQuestComplete;
 
-    bool locationAction();
+    bool fishDonated;
 
-    void talkToLewis();
+    bool cropDonated;
 
-    bool beachAction();
-    
+    bool mineralDonated;
+
+    bool talkedToClint;
+
+    bool usedJojaDeal;
+
+    bool acceptedJojaHelp;
+
     void gameLoop();
 
     void displayMenu();
 
     void displayMap();
 
-    bool bundleComplete();
+    bool locationAction();
 
     bool travel();
 
-    void typeMessage(string message);
+    bool beachAction();
 
-    void pauseGame();
-    
     bool communityCenterAction();
-    
+
+    bool townAction();
+
+    void talkToWilly();
+
+    void talkToLewis();
+
+    void talkToClint();
+
+    void visitJojaMart();
+
+    void talkToMorris();
+
+    void giveJojaBundleItem();
+
     void talkAtCommunityCenter();
-    
+
     void displayBundleProgress();
 
     bool donateBundleItems();
 
-    bool fishDonated;
-    
-    bool cropDonated;
+    bool bundleComplete();
 
-    bool mineralDonated;
-   
+    void typeMessage(string message);
+
+    void pauseGame();
+
+    void displayJonSnow();
+
+    bool mineAction();
+
+    void mineForOre();
+
+    int miningAttempts;
+
+    bool farmAction();
+
+    void plantParsnips();
+
+    void harvestParsnips();
+
+    bool parsnipsPlanted;
+
+    int parsnipPlantDay;
+
     public:
     Game();
 
     void start();
-
-
-   
 };
-
-
 
 #endif

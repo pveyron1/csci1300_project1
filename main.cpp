@@ -17,7 +17,7 @@ int main()
 }
 
 
-cout << "\nWelcome to bundle game! " << endl;
+cout << "\nWelcome to Pelican Town " << endl;
 cout << "To complete the game, you must collect all items for The Final Bundle" << endl;
 cout << "and donate them to the Community Center." << endl;
 cout << "You can always check what you still need to collect by visitng the community center" << endl;
@@ -35,8 +35,6 @@ for (int i = 0; i < 3; i++)
 {
     this_thread::sleep_for(chrono::milliseconds(500));
 }
-
-
     Game game;
 
     game.start();

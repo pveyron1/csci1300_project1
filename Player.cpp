@@ -5,7 +5,7 @@ using namespace std;
 
 Player::Player()
 {
-    name = "Farmer";
+    name = "";
     money = 100;
     currentLocation = 0;
 }
@@ -19,8 +19,6 @@ string Player::getName()
 {
     return name;
 }
-
-
 
 int Player::getMoney()
 {
@@ -40,7 +38,7 @@ Inventory& Player::getInventory()
 void Player::displayStats()
 {
     cout << "Player: " << name << endl;
-    cout << "Money: $" << money << endl;
+   // cout << "Money: $" << money << endl;
 }
 void Player::setLocation(int newLocation)
 {
